@@ -57,7 +57,11 @@ subset_data <- X_data[,grepl("subjectid|activity|mean\\(|std\\(", names(X_data))
 cat("load activity labels, then clean it and apply them to the main dataset...\n")
 al <- read.table("~/My Work/UFPE/CIn/Sabatical 2015/Studies/Coursera/Getting and Cleaning Data/UCI HAR Dataset/activity_labels.txt", quote="\"", comment.char="")
 al$V2 <- tolower(sub("_","",al$V2))
-subset_data$activity <- sapply(subset_data$activity,function(x){al[al$V1==x,"V2"]})
+subset_data$activity <- sapply(subset_data$activity,function(x)
+  {
+  al[al$V1==x,"V2"]
+  }
+)
 
 # 4. Appropriately label the data set with descriptive variable names.
 cat("remove noisy characters from names...\n")
@@ -73,4 +77,4 @@ names(subset_data) <- gsub("std","STDEV",names(subset_data))
 finaldata <- subset_data %>% 
               group_by(subjectid,activity) %>% 
               summarise_each(funs(mean))
-
+write.csv(file = "tidydata.txt", finaldata)
