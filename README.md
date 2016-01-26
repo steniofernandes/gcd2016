@@ -26,7 +26,9 @@ Here are the data for the project:
 https://d396qusza40orc.cloudfront.net/getdata/projectfiles/UCI%20HAR%20Dataset.zip
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-You should create one R script called run_analysis.R that does the following.
+##This repo contains:
+
+###One R script called run_analysis.R that does the following:
 
 <li> Merges the training and the test sets to create one data set. </li>
 <li> Extracts only the measurements on the mean and standard deviation for each measurement.</li>
@@ -34,4 +36,17 @@ You should create one R script called run_analysis.R that does the following.
 <li> Appropriately labels the data set with descriptive variable names.</li>
 <li> From the data set in step 4, creates a second, independent 
 tidy data set with the average of each variable for each activity and each subject.</li>
+
+###The final dataset called tidydata.txt, in csv format
+
+###Cleaning process description (as follows)
+
+<li> After reading data, join variables with rbind into another variable</li>
+<li> Subset data with the variables that has mean and standard deviation</li>
+<li> Load activity factor from numbers to character factor found in the activity_labels.txt  </li>
+<li> Clean variable names</li>
+<li> Create a different dataset grouped by subject and activity with the average for the remainin variable</li>
+
+
+###Codebook
 
