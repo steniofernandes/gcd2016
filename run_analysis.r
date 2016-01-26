@@ -77,4 +77,4 @@ names(subset_data) <- gsub("std","STDEV",names(subset_data))
 finaldata <- subset_data %>% 
               group_by(subjectid,activity) %>% 
               summarise_each(funs(mean))
-write.csv(file = "tidydata.txt", finaldata)
+write.table(file = "tidydata.txt", finaldata, row.names = FALSE)
