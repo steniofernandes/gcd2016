@@ -1,14 +1,23 @@
-# Getting and Cleanind Data - Final Project - Jan 2016
+# Getting and Cleanind Data
+## Final Project - Feb 2016
+### Stenio Fernandes
 
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. 
+##Goal
+The purpose of this project is to demonstrate my ability to collect, work with, and clean a data set.
+
 The goal is to prepare tidy data that can be used for later analysis. 
-You will be graded by your peers on a series of yes/no questions related to the project. 
-You will be required to submit: 
+
+I am submitting: 
 
 1) a tidy data set as described below, 
-2) a link to a Github repository with your script for performing the analysis, and 
-3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
 
+2) a link to a Github repository with my script for performing the analysis, and 
+
+3) a code book that describes the variables, the data, and any transformations or work that I performed to clean up the data called <b>codebook3.md</b>.
+
+####This repo explains how all of the scripts work and how they are connected.
+
+## Preamble
 One of the most exciting areas in all of data science right now is wearable computing - see for example
 
 http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand
@@ -39,14 +48,14 @@ tidy data set with the average of each variable for each activity and each subje
 
 ###The final dataset called tidydata.txt, in csv format
 
-###Cleaning process description (as follows)
+##Steps of the cleaning process
 
 <li> After reading data, join variables with rbind into another variable</li>
 <li> Subset data with the variables that has mean and standard deviation</li>
 <li> Load activity factor from numbers to character factor found in the activity_labels.txt  </li>
 <li> Clean variable names</li>
 <li> Create a different dataset grouped by subject and activity with the average for the remainin variable</li>
-
-
-###Codebook
+<br></br>
+##Codebook
+###File: codebook3.md
 
